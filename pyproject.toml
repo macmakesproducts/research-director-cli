@@ -1,0 +1,41 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "research-director"
+version = "1.0.0"
+description = "Structured deep-research CLI with mechanically enforced output. Two-turn architecture: Claude researches, deterministic template renders."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "Christian MacLean", email = "macmakesproducts+research-director@gmail.com" },
+]
+keywords = ["claude", "research", "ai-tool", "cli", "anthropic"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+    "Topic :: Utilities",
+]
+dependencies = [
+    "anthropic>=0.40.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/macmakesproducts/research-director-cli"
+Issues = "https://github.com/macmakesproducts/research-director-cli/issues"
+"Skill (Claude.ai)" = "https://github.com/macmakesproducts/research-director"
+
+[project.scripts]
+rd = "research_director_cli.cli:main"
+research-director = "research_director_cli.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/research_director_cli"]
