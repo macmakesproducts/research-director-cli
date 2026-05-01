@@ -23,7 +23,7 @@ A two-turn research tool that produces structurally-guaranteed research briefs.
 
 The original [Research Director](https://github.com/macmakesproducts/research-director) was a single-turn Claude skill — a SKILL.md file uploaded to claude.ai. After three iterations of escalating spec-strictness (`v1.2.0` → `v1.2.1` → `v1.2.2` adding "non-skippable" language, verbatim required headers, even a complete worked example baked into the spec), the produced briefs still ignored the structural contract while doing the underlying research well.
 
-That is itself a finding: **single-turn Claude skills can't enforce structural output contracts via prose instructions**. The model interprets prose-spec as a strong suggestion, not a requirement, and its own sense of what a "good research brief" looks like overrides the spec's prescribed shape.
+**single-turn Claude skills can't enforce structural output contracts via prose instructions**. The model interprets prose-spec as a strong suggestion, not a requirement, and its own sense of what a "good research brief" looks like overrides the spec's prescribed shape.
 
 The CLI architecture solves this by separating *research* (where Claude excels) from *rendering* (where determinism is required):
 
