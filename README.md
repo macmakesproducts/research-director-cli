@@ -1,3 +1,7 @@
+> **📦 The Research Director _skill_ has moved.** Its canonical home is now **[macmakesproducts/researchdirector](https://github.com/macmakesproducts/researchdirector)** — install the portable, cross-platform skill from there. The legacy CLI-wrapper skill in `claude_code_skill/` is superseded; this repo remains the home of the Research Director _CLI_.
+
+---
+
 # Research Director CLI
 
 A two-turn research tool that produces structurally-guaranteed research briefs.
